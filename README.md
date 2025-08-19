@@ -4,7 +4,11 @@
 
 ---
 
-# live url : https://legacy-lungi.vercel.app
+## live url : https://legacy-lungi.vercel.app
+
+---
+
+## Admin  url : https://legacy-lungi.vercel.app/dashboard
 
 ---
 
