@@ -82,16 +82,16 @@ export default function ProductsPage() {
             </tr>
           </thead>
           <tbody>
-            {products.map(p => (
+            {products?.map(p => (
               <tr key={p._id} className="hover:bg-gray-50 transition">
-                <td className="p-3"><img src={p.img} alt={p.name} className="w-16 h-16 object-cover rounded-xl" /></td>
+                <td className="p-3"><img src={p?.image} alt={p.name} className="w-16 h-16 object-cover rounded-xl" /></td>
                 <td className="p-3 font-medium text-gray-800">{p.name}</td>
-                <td className="p-3 text-gray-700">{p.category}</td>
-                <td className="p-3 text-gray-700">{p.brand}</td>
-                <td className="p-3  text-gray-700">{p.sizes?.join(", ")}</td>
+                <td className="p-3 text-gray-700">{p?.category}</td>
+                <td className="p-3 text-gray-700">{p?.brand}</td>
+                <td className="p-3  text-gray-700">{p?.sizes?.join(", ")}</td>
                 <td className="p-3 text-gray-700">
-                  <span className="line-through text-gray-400 mr-1">${p.oldPrice}</span>
-                  <span className="font-semibold text-green-600">${p.newPrice}</span>
+                  <span className="line-through text-gray-400 mr-1">${p?.oldPrice}</span>
+                  <span className="font-semibold text-green-600">${p?.newPrice}</span>
                 </td>
                 <td className="p-3 text-red-600 font-semibold">{p.discount}%</td>
                 <td className="p-3 flex space-x-2">

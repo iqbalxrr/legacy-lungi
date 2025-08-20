@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 export default function ProductCard({ product }) {
    
@@ -26,18 +27,20 @@ export default function ProductCard({ product }) {
                     </div>
 
                     {/* Info */}
-                    <div className="pt-3 text-center">
+                    <div className=" pt-3 text-center">
                         {/* Title with hover yellow effect */}
-                        <h3 className="text-sm font-semibold min-h-[40px] transition-colors duration-200 hover:text-yellow-500">
+                        <h3 className="text-sm font-semibold  transition-colors duration-200 hover:text-yellow-500">
                             {product?.name}
                         </h3>
-                        <div className="mt-2">
+                        <div className="flex justify-center items-center mt-2">
                             {product?.oldPrice && (
-                                <span className="text-gray-400 line-through mr-2">
-                                    ৳{product?.oldPrice}
+                                <span className="text-gray-400 flex items-center justify-center line-through mr-2">
+                                    <TbCurrencyTaka size={20} /> {product?.oldPrice} 
                                 </span>
                             )}
-                            <span className="text-red-500 font-bold">৳{product?.newPrice}</span>
+                            <span className="text-red-500 flex items-center justify-center font-bold">
+                                <TbCurrencyTaka size={20} /> {product?.newPrice}
+                            </span>
                         </div>
                     </div>
                     <div className="px-4 pb-4">

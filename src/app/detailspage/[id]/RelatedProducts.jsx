@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 export default function RelatedProducts({ products }) {
 
@@ -15,8 +16,8 @@ export default function RelatedProducts({ products }) {
               {/* Image with zoom effect on hover */}
               <div className="w-full h-48 overflow-hidden rounded-t group">
                 <img
-                  src={product.image}
-                  alt={product.title}
+                  src={product?.image}
+                  alt={product?.title}
                   className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
               </div>
@@ -26,7 +27,7 @@ export default function RelatedProducts({ products }) {
                 {product.name}
               </h3>
 
-              <p className="text-yellow-600 font-bold">৳ {product.price}</p>
+              <p className="text-yellow-600 font-bold"> <TbCurrencyTaka size={20} /> {product.price}</p>
             
 
             {/* Button */}

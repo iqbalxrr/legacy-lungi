@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 export default function ProductDetails({ product }) {
   const { addToCart } = useCart();
@@ -49,7 +50,7 @@ export default function ProductDetails({ product }) {
       {/* Product Images */}
       <div>
         <div className="border">
-          <img src={product.image} alt={product.name} className="w-full object-contain" />
+          <img src={product.image} alt={product.name} className="w-full h-[500px] object-contain" />
         </div>
       </div>
 
@@ -57,8 +58,8 @@ export default function ProductDetails({ product }) {
       <div>
         <h1 className="text-2xl font-semibold">{product.name}</h1>
         <div className="flex gap-4 my-4">
-          <span className="text-xl font-bold ">৳ {product?.newPrice}</span>
-          <span className="line-through text-gray-400">৳ {product.oldPrice}</span>
+          <span className="text-xl font-bold flex justify-center items-center"><TbCurrencyTaka size={20} /> {product?.newPrice}</span>
+          <span className="line-through text-gray-400 flex justify-center items-center">  <TbCurrencyTaka size={20} /> {product?.oldPrice}</span>
         </div>
 
         <div className="mb-4">

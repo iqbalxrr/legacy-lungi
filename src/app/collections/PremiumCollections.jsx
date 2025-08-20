@@ -12,7 +12,7 @@ const PremiumCollections = async () => {
   // MongoDB ObjectId → string
   const safeData = data?.map(item => ({
     ...item,
-    _id: item._id.toString(),
+    _id: item?._id.toString(),
   }));
 
 
@@ -22,7 +22,7 @@ const PremiumCollections = async () => {
       <h2 className="text-2xl font-bold mb-6">Premium Collections</h2>
       <div className="grid grid-320 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {safeData?.map(item => (
-          <ProductCard key={item._id} product={item} />
+          <ProductCard key={item?._id} product={item} />
         ))}
       </div>
     </div>
